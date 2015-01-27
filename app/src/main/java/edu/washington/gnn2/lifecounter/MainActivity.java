@@ -38,17 +38,17 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         }
         if(savedInstanceState != null){
             for(Integer i = 0; i <= savedInstanceState.size(); i++){
-                Integer yes = i+1;
-                String key = yes.toString();
+                int yes = i+1;
+                String key = ((Integer) yes).toString();
                 Integer sum = (Integer) savedInstanceState.getInt(key);
 //                playersSums.set(i, sum);
 
-                View v = (View) findViewById(R.id.person);
-
-               View current =  v.findViewById(yes);
-                System.out.println("Current view id = " + current.getId());
-                TextView total = (TextView) current.findViewById(R.id.lifetotal);
-                total.setText("Life total = " + sum.toString());
+                //View v = this;
+               //setContentView(layout.custom);
+              // View current = v.findViewById(((int)yes));
+              //  System.out.println("Current view id = " + current.getId());
+              //  TextView total = (TextView) current.findViewById(R.id.lifetotal);
+              //  total.setText("Life total = " + sum.toString());
             }
 
         }
